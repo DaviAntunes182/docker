@@ -1,0 +1,10 @@
+<h2>Minha Lista de Tarefas</h2>
+<input [(ngModel)]="novaTarefa" placeholder="Digite uma tarefa" />
+<button (click)="adicionarTarefa()">Adicionar</button>
+<ul>
+ <li *ngFor="let tarefa of tarefas; let i = index">
+ {{ tarefa }}
+ <button (click)="removerTarefa(i)">Remover</button>
+ </li>
+</ul>
+<a routerLink="/sobre">Ir para Sobre</a>
